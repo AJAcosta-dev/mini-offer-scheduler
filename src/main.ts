@@ -1,23 +1,10 @@
-import { App, Stack, StackProps } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
+import * as cdk from 'aws-cdk-lib';
 
-export class MyStack extends Stack {
-  constructor(scope: Construct, id: string, props: StackProps = {}) {
-    super(scope, id, props);
+import { SchedulerStack } from './stacks/SchedulerStack';
 
-    // define resources here...
-  }
-}
+const app = new cdk.App();
 
-// for development, use account/region from cdk cli
-const devEnv = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
-};
-
-const app = new App();
-
-new MyStack(app, 'mini-offer-scheduler-dev', { env: devEnv });
-// new MyStack(app, 'mini-offer-scheduler-prod', { env: prodEnv });
-
-app.synth();
+new SchedulerStack(
+  app,
+  'MiniOfferSchedulerStack',
+);

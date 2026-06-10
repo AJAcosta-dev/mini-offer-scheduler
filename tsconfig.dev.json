@@ -26,7 +26,8 @@
     "target": "ES2022",
     "types": [
       "jest",
-      "node"
+      "node",
+      "aws-lambda"
     ],
     "moduleResolution": "nodenext",
     "typeRoots": [

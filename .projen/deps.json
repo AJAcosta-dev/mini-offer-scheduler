@@ -71,6 +71,18 @@
       "type": "build"
     },
     {
+      "name": "@aws-sdk/client-sqs",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-sdk/client-ssm",
+      "type": "runtime"
+    },
+    {
+      "name": "@types/aws-lambda",
+      "type": "runtime"
+    },
+    {
       "name": "aws-cdk-lib",
       "version": "^2.189.1",
       "type": "runtime"
